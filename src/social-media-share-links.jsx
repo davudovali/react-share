@@ -34,6 +34,22 @@ export function facebook(url, { title, description, picture, hashtag }) {
   });
 }
 
+
+export function facebookMessenger(url, { appId, caption, description, name, picture }) {
+    assert(url, 'facebook.url');
+
+    return 'https://www.facebook.com/dialog/send' + objectToGetParams({
+        display: 'popup',
+        app_id: appId,
+        link: url,
+        caption,
+        description,
+        name,
+        picture
+    });
+}
+
+
 export function googlePlus(url) {
   assert(url, 'googlePlus.url');
 

@@ -128,6 +128,24 @@ export const FacebookShareButton = createShareButton('facebook', props => ({
   windowHeight: 400,
 });
 
+export const FacebookMessengerShareButton = createShareButton('facebookMessenger', props => ({
+    appId: props.appId,
+    caption: props.caption,
+    description: props.description,
+    name: props.title,
+    picture: props.picture,
+}), {
+    appId: PropTypes.string,
+    caption: PropTypes.string,
+    description: PropTypes.string,
+    title: PropTypes.string,
+    picture: PropTypes.string,
+}, {
+    windowWidth: 550,
+    windowHeight: 400,
+});
+
+
 export const TwitterShareButton = createShareButton('twitter', props => ({
   hashtags: props.hashtags,
   title: props.title,
